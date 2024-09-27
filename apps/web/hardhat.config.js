@@ -5,15 +5,19 @@ require('dotenv').config()
 
 const forkingConfig = {
   httpHeaders: {
-    Origin: 'localhost:3000', // infura allowlists requests by origin
+    Origin: '127.0.0.1:3000', // infura allowlists requests by origin
   },
 }
 
 const forks = {
   [ChainId.MAINNET]: {
-    url: `https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
+    url: `http://127.0.0.1:8545`,
     ...forkingConfig,
   },
+  // [ChainId.MAINNET]: {
+  //   url: `https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
+  //   ...forkingConfig,
+  // },
   [ChainId.POLYGON]: {
     url: `https://polygon-mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
     ...forkingConfig,

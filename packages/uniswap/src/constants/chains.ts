@@ -131,8 +131,11 @@ export const UNIVERSE_CHAIN_INFO: Record<UniverseChainId, UniverseChainInfo> = {
       fallback: {
         http: ['https://rpc.ankr.com/eth', 'https://eth-mainnet.public.blastapi.io'],
       },
+      // appOnly: {
+      //   http: [`https://mainnet.infura.io/v3/${config.infuraKey}`, config.quicknodeMainnetRpcUrl],
+      // },
       appOnly: {
-        http: [`https://mainnet.infura.io/v3/${config.infuraKey}`, config.quicknodeMainnetRpcUrl],
+        http: [`http://127.0.0.1:8545`],
       },
     },
     urlParam: 'ethereum',

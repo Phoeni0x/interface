@@ -4,7 +4,8 @@ import { CyHttpMessages } from 'cypress/types/net-stubbing'
 const PricingQuoteUSDC = 'uniswapx/pricingQuoteUSDC.json'
 const PricingQuoteDAI = 'uniswapx/pricingQuoteDAI.json'
 
-const QuoteEndpoint = 'https://interface.gateway.uniswap.org/v2/quote'
+// const QuoteEndpoint = 'https://interface.gateway.uniswap.org/v2/quote'
+ const QuoteEndpoint = 'https://run.mocky.io/v3/f1d1721f-8c4c-409a-b623-1207ccdb5f8b'
 
 /** Stubs quote to return a quote for non-price requests */
 export function stubNonPriceQuoteWith(fixture: string) {
